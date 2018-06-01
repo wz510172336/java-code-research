@@ -1,0 +1,4 @@
+expression=public .*  demo\..*Service\..*\(.*\)
+aspectBefore=demo.aspect.LogAspect.Before
+aspectAfter=demo.aspect.LogAspect.After
+aspectaround=demo.aspect.LogAspect.around
