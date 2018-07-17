@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/research-mybatis.iml" filepath="$PROJECT_DIR$/research-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/research-mybatis-1.0/research-mybatis-1.0.iml" filepath="$PROJECT_DIR$/research-mybatis-1.0/research-mybatis-1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/research-mybatis-dal/research-mybatis-dal.iml" filepath="$PROJECT_DIR$/research-mybatis-dal/research-mybatis-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/research-mybatis-generator/research-mybatis-generator.iml" filepath="$PROJECT_DIR$/research-mybatis-generator/research-mybatis-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/research-mybatis-lib/research-mybatis-lib.iml" filepath="$PROJECT_DIR$/research-mybatis-lib/research-mybatis-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/research-mybatis-web/research-mybatis-web.iml" filepath="$PROJECT_DIR$/research-mybatis-web/research-mybatis-web.iml" />
+    </modules>
+  </component>
+</project>

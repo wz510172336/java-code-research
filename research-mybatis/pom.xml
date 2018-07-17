@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gupao</groupId>
+    <artifactId>research-mybatis</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>research-mybatis-lib</module>
+        <module>research-mybatis-generator</module>
+        <module>research-mybatis-dal</module>
+        <module>research-mybatis-web</module>
+        <module>research-mybatis-1.0</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project-vesion>${project.version}</project-vesion>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.gupao</groupId>
+                <artifactId>research-mybatis-lib</artifactId>
+                <version>${project-vesion}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gupao</groupId>
+                <artifactId>research-mybatis-dal</artifactId>
+                <version>${project-vesion}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+<!--
+    <properties>
+
+        &lt;!&ndash;mybatis-generate配置文件位置&ndash;&gt;
+        <mybatis.generator.configurationFile>
+            ${project.basedir}/src/main/resources/config/generate-config.xml
+        </mybatis.generator.configurationFile>
+    </properties>-->
+
+
+
+
+
+
+</project>

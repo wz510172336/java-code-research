@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+    <root level="INFO">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="File"/>
+    </root>
+
+    <property resources="app.properties"/>
+    <property name="Log_Home" value="${app.log.dir}"/>
+    <property name="charset" value="utf-8"/>
+
+    <!--控制台输出-->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+     <!--文件输出-->
+    <appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${Log_Home}/default.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${Log_Home}/default_%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+            <maxHistory>50</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>500MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <charset>${charset}</charset>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+    </appender>
+
+      <!--指定具体logger-->
+    <logger name="reasearch.mybatis.dal" level="INFO"></logger>
+
+    <logger name="research.mybatis.web" level="INFO"></logger>
+
+</configuration>

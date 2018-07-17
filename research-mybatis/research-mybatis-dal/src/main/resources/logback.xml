@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+
+  <!--  <property resources="app.properties"/>
+    <property name="Log_Home" value="${app.log.dir}"/>
+    <property name="charset" value="utf-8"/>-->
+
+    <!--控制台输出-->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <!-- &lt;!&ndash;文件输出&ndash;&gt;
+    <appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${Log_Home}/default.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${Log_Home}/default_%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+            <maxHistory>50</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>500MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <charset>${charset}</charset>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+    </appender>-->
+
+      <!--指定具体logger-->
+
+
+    <logger name="reasearch.mybatis.dal.mapper.UserMapper" level="INFO"></logger>
+    <logger name="research.mybatis.web" level="INFO"></logger>
+
+    <logger name="com.ibatis" level="DEBUG" />
+    <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG" />
+    <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG" />
+    <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG"  />
+    <logger name="java.sql.Connection" level="DEBUG" />
+    <logger name="java.sql.Statement" level="DEBUG" />
+    <logger name="java.sql.PreparedStatement" level="DEBUG" />
+
+    <root level="DEBUG">
+        <appender-ref ref="Console"/>
+        <!-- <appender-ref ref="File"/>-->
+    </root>
+</configuration>
